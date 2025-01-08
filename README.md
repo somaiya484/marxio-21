@@ -1,4 +1,4 @@
-# Full Stack E-Commerce Website
+<!-- # Full Stack E-Commerce Website
 
 This is a Full Stack E-Commerce Website built with **Next.js 14**, **Tailwind CSS**, **Firebase**, **Stripe**, and **Algolia**.
 
@@ -152,4 +152,4 @@ To access the Admin Panel, use the following credentials:
 
 ## Conclusion
 
-This project provides a robust e-commerce solution leveraging modern technologies. Feel free to customize and extend its functionality as needed.
+This project provides a robust e-commerce solution leveraging modern technologies. Feel free to customize and extend its functionality as needed. -->
