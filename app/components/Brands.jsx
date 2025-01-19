@@ -43,7 +43,7 @@ export default function Brands({ brands }) {
   }
 
   return (
-    <div className="flex flex-col gap-8 justify-center overflow-hidden mt-20">
+    <div className="flex flex-col gap-8 justify-center overflow-hidden md:p-10 p-5 mt-20">
       <Slider {...settings}>
         {(brands?.length <= 2
           ? [...brands, ...brands, ...brands]

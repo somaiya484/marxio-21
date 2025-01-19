@@ -13,6 +13,7 @@ import CustomerReviews from "./components/CustomerReviews";
 import Brands from "./components/Brands";
 import { getBrands } from "@/lib/firestore/brands/read_server";
 import Footer from "./components/Footer";
+import Banner from "./components/Banner";
 
 export const dynamic = 'force-dynamic'
 
@@ -29,7 +30,8 @@ export default async function Home() {
   return (
     <main className="w-screen h-screen overflow-x-hidden overflow-y-auto">
       <Header />
-      <FeaturedProductSlider featuredProducts={featuredProducts} />
+      <Banner></Banner>
+      {/* <FeaturedProductSlider featuredProducts={featuredProducts} /> */}
       <Collections collections={collections} />
       <Categories categories={categories} />
       <ProductsGridView products={products} />
