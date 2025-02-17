@@ -9,6 +9,7 @@ const nextConfig = {
     NEXT_PUBLIC_FIREBASE_APP_ID: "1:286225156632:web:33df79d70c318f5d03d16d",
     NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID: "G-M4TG8K22HF",
     NEXT_PUBLIC_DOMAIN: "https://marxio.com",
+    
   },
   images: {
     remotePatterns: [
