@@ -150,7 +150,7 @@ function Row({ item, index }) {
         </div>
       </td>
       <td className="border-y bg-white px-3 py-2  whitespace-nowrap">
-        ₹ {totalAmount}
+        ৳ {totalAmount}
       </td>
       <td className="border-y bg-white px-3 py-2">
         {item?.checkout?.line_items?.length}

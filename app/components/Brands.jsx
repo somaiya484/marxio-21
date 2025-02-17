@@ -38,31 +38,29 @@ export default function Brands({ brands }) {
     ],
   };
 
-  if (brands.length === 0) {
-    return <></>;
+  if (!brands || brands.length === 0) {
+    return null;
   }
 
   return (
     <div className="flex flex-col gap-8 justify-center overflow-hidden md:p-10 p-5 mt-20">
       <Slider {...settings}>
-        {(brands?.length <= 2
+        {(brands.length <= 2
           ? [...brands, ...brands, ...brands]
-          : brands
-        )?.map((brand) => {
-          return (
-            <div className="px-2">
-              <div className="flex flex-col gap-2 items-center justify-center">
-                <div className="h-20 rounded-lg md:p-5 p-2 border overflow-hidden">
-                  <img
-                    className="h-full w-full object-cover"
-                    src={brand?.imageURL}
-                    alt=""
-                  />
-                </div>
+          : brands.slice().reverse() // Reversing the array
+        ).map((brand, index) => (
+          <div key={brand.id || index} className="px-2">
+            <div className="flex flex-col gap-2 items-center justify-center">
+              <div className="h-20 rounded-lg md:p-5 p-2 border overflow-hidden">
+                <img
+                  className="h-full w-full object-cover"
+                  src={brand.imageURL}
+                  alt={brand.name || "Brand"}
+                />
               </div>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </Slider>
     </div>
   );

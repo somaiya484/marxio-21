@@ -3,7 +3,6 @@ import {
   getProducts,
 } from "@/lib/firestore/products/read_server";
 import Header from "./components/Header";
-import FeaturedProductSlider from "./components/Sliders";
 import Collections from "./components/Collections";
 import { getCollections } from "@/lib/firestore/collections/read_server";
 import Categories from "./components/Categories";
@@ -29,10 +28,9 @@ export default async function Home() {
 
   return (
     <main className="w-screen h-screen overflow-x-hidden overflow-y-auto">
-      <Header />
+      <Header categories={categories} />
       <Banner></Banner>
-      {/* <FeaturedProductSlider featuredProducts={featuredProducts} /> */}
-      <Collections collections={collections} />
+      <Collections collections={collections} className="max-w-screen-xl mx-auto" />
       <Categories categories={categories} />
       <ProductsGridView products={products} />
       <Brands brands={brands} />

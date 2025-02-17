@@ -41,7 +41,7 @@ export default function Page() {
             <h3 className="bg-green-100 text-green-500 text-xs rounded-lg px-2 py-1 uppercase">
               {order?.status ?? "pending"}
             </h3>
-            <h3 className="text-green-600">₹ {totalAmount}</h3>
+            <h3 className="text-green-600">৳ {totalAmount}</h3>
           </div>
           <h4 className="text-gray-600 text-xs">
             {order?.timestampCreate?.toDate()?.toString()}
@@ -61,7 +61,7 @@ export default function Page() {
                     {product?.price_data?.product_data?.name}
                   </h1>
                   <h1 className="text-gray-500 text-xs">
-                    ₹ {product?.price_data?.unit_amount / 100} <span>X</span>{" "}
+                    ৳ {product?.price_data?.unit_amount / 100} <span>X</span>{" "}
                     <span>{product?.quantity?.toString()}</span>
                   </h1>
                 </div>

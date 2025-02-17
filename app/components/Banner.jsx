@@ -35,7 +35,7 @@ const Banner = () => {
             key={index}
             src={banner}
             alt={`Banner ${index + 1}`}
-            className="w-full h-full object-cover flex-shrink-0"
+            className="w-full object-cover flex-shrink-0 h-1/4 "
           />
         ))}
       </div>
@@ -60,9 +60,8 @@ const Banner = () => {
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`w-3 h-3 rounded-full ${
-              currentIndex === index ? "bg-white" : "bg-gray-400"
-            }`}
+            className={`w-3 h-3 rounded-full ${currentIndex === index ? "bg-white" : "bg-gray-400"
+              }`}
           ></button>
         ))}
       </div>
