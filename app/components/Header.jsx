@@ -32,16 +32,20 @@ export default function Header() {
   }, []);
 
   const menuList = [
-    { name: "TV", link: "/TV" },
-    { name: "Fan", link: "/Fan" },
-    { name: "Fridge", link: "/Fridge" },
-    { name: "AC", link: "/AC" },
-    { name: "Washing", link: "/about" },
-    { name: "Lamp", link: "/Lamp" },
-    { name: "Stove", link: "/Stove" },
-    { name: "Microwave", link: "/Microwave" },
-    { name: "Kettle", link: "/Kettle" },
-    { name: "Iron", link: "/Iron" },
+    { name: "panjabi", link: "/categories/of7m6kr0oUPhntIEh3xE" },
+    { name: "Fan", link: "/categories/BTHP7QKfUhO2y17cZSwe" },
+    { name: "Refrigerator", link: "/categories/BayUo8OyhsS0F7WrzkqY" },
+    { name: "Kettle", link: "/categories/CguA0NuNca9Gv1UpDmKQ" },
+    { name: "Microwave", link: "/categories/GG4xNmfE2iyY8QQ9sIkL" },
+    { name: "Washing Machine", link: "/categories/JeWjYpL50c8jwckb0w9H" },
+    { name: "AC", link: "/categories/b5P1AgWnOIwR4Mlknf5e" },
+    { name: "Lamp", link: "/categories/M7TdNEhyUZHurxw6CJFS" },
+    { name: "Blender", link: "/categories/YELLimWrxFIeas4j2PYC" },
+    { name: "Iron", link: "/categories/a3PpVz84BJSMjwsq8ety" },
+    { name: "Rice Cooker", link: "/categories/bxkNjUA2hxyFpJpdtdPU" },
+    { name: "Stove", link: "/categories/cAwBCbQZ7ncxfGdy0c5n" },
+    { name: "Skin Care", link: "/categories/efXisYOcU5F97vhVMVNw" },
+    { name: "Induction", link: "/categories/yV6iStZBXeMeS0vgqaAe" },
   ];
 
   return (

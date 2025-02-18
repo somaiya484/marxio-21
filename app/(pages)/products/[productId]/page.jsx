@@ -1,4 +1,4 @@
-import { getProduct } from "@/lib/firestore/products/read_server";
+import { getProductIds, getProduct } from "@/lib/firestore/products/read_server";
 import Photos from "./components/Photos";
 import Details from "./components/Details";
 import Reviews from "./components/Reviews";
@@ -17,6 +17,14 @@ export async function generateMetadata({ params }) {
       images: [product?.featureImageURL],
     },
   };
+}
+
+// This function generates static params for the dynamic product page
+export async function generateStaticParams() {
+  const productIds = await getProductIds(); // Fetch all product IDs from your database
+  return productIds.map(id => ({
+    productId: id, // This corresponds to the dynamic [productId] in your page path
+  }));
 }
 
 export default async function Page({ params }) {

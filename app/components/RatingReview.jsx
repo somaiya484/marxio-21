@@ -8,13 +8,19 @@ export default function RatingReview({ productId }) {
 
   useEffect(() => {
     const fetchReviewCounts = async () => {
-      const reviewCounts = await getProductReviewCounts({ productId });
-      setCounts(reviewCounts);
+      try {
+        const reviewCounts = await getProductReviewCounts({ productId });
+        setCounts(reviewCounts);
+      } catch (error) {
+        console.error("Error fetching review counts:", error);
+      }
     };
+
     fetchReviewCounts();
   }, [productId]);
 
-  if (!counts) return <p className="text-xs text-gray-400">Loading reviews...</p>;
+  if (!counts)
+    return <p className="text-xs text-gray-400">Loading reviews...</p>;
 
   return (
     <div className="flex gap-3 items-center">

@@ -17,12 +17,13 @@ export default function Layout({ children }) {
 function AdminChecking({ children }) {
   const { user, isLoading } = useAuth();
   const router = useRouter();
-
+  
   useEffect(() => {
-    if (!user && !isLoading) {
+    if (!isLoading && !user) {
       router.push("/login");
     }
   }, [user, isLoading]);
+
 
   if (isLoading) {
     return (
