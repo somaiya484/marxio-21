@@ -65,8 +65,8 @@ export default function Header() {
 
         {/* Desktop Icons */}
         <div className="hidden md:flex items-center gap-4">
-            <AdminButton />
           <AuthContextProvider>
+            <AdminButton />
           </AuthContextProvider>
           <AuthContextProvider>
             <HeaderClientButtons />

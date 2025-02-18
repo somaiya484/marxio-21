@@ -14,7 +14,6 @@ import { getBrands } from "@/lib/firestore/brands/read_server";
 import Footer from "./components/Footer";
 import Banner from "./components/Banner";
 
-export const dynamic = 'force-dynamic'
 
 export default async function Home() {
   const [featuredProducts, collections, categories, products, brands] =
