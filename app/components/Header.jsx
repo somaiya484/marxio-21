@@ -32,7 +32,7 @@ export default function Header() {
   }, []);
 
   const menuList = [
-    { name: "panjabi", link: "/categories/of7m6kr0oUPhntIEh3xE" },
+    { name: "Panjabi", link: "/categories/of7m6kr0oUPhntIEh3xE" },
     { name: "Fan", link: "/categories/BTHP7QKfUhO2y17cZSwe" },
     { name: "Refrigerator", link: "/categories/BayUo8OyhsS0F7WrzkqY" },
     { name: "Kettle", link: "/categories/CguA0NuNca9Gv1UpDmKQ" },
