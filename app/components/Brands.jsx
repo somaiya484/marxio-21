@@ -43,11 +43,11 @@ export default function Brands({ brands }) {
   }
 
   return (
-    <div className="flex flex-col gap-8 justify-center overflow-hidden md:p-10 p-5 mt-20">
+    <div className="flex flex-col gap-8 justify-center overflow-hidden md:p-10 p-5 mt-20 md:max-w-[1300px] mx-auto">
       <Slider {...settings}>
         {(brands.length <= 2
           ? [...brands, ...brands, ...brands]
-          : brands.slice().reverse() // Reversing the array
+          : brands.slice().reverse()
         ).map((brand, index) => (
           <div key={brand.id || index} className="px-2">
             <div className="flex flex-col gap-2 items-center justify-center">

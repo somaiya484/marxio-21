@@ -1,70 +1,66 @@
-"use client"
+"use client";
+
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
+const banners = [
+  "/banner1.jpg",
+  "/banner2.jpg",
+  "/banner3.jpg",
+];
+
 const Banner = () => {
-  const banners = ["/banner1.jpg", "/banner2.jpg", "/banner3.jpg"]; // Array of banner images
-  const [currentIndex, setCurrentIndex] = useState(0); // Current active banner
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Automatically switch banners every 5 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % banners.length);
-    }, 5000);
-
-    return () => clearInterval(interval); // Cleanup on component unmount
-  }, [banners.length]);
-
-  // Handle manual navigation
-  const goToPrevious = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + banners.length) % banners.length);
-  };
-
-  const goToNext = () => {
+  const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % banners.length);
   };
 
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? banners.length - 1 : prevIndex - 1
+    );
+  };
+
+  // Auto-slide every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 5000);
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, []);
+
   return (
-    <div className="relative w-full overflow-hidden">
-      {/* Banner Images */}
-      <div
-        className="flex transition-transform duration-700 ease-in-out"
-        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-      >
-        {banners.map((banner, index) => (
-          <img
-            key={index}
+    <div className="relative w-full h-[400px] overflow-hidden">
+      {banners.map((banner, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 transition-opacity duration-1000 ${
+            index === currentIndex ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <Image
             src={banner}
             alt={`Banner ${index + 1}`}
-            className="w-full object-cover flex-shrink-0 h-1/4 "
+            layout="fill"
+            objectFit="cover"
+            priority={index === currentIndex}
+            className="h-[400px] w-full object-cover"
           />
-        ))}
-      </div>
+        </div>
+      ))}
 
       {/* Navigation Buttons */}
       <button
-        onClick={goToPrevious}
-        className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white px-4 py-2 rounded-full"
+        onClick={prevSlide}
       >
         ❮
       </button>
       <button
-        onClick={goToNext}
-        className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white px-4 py-2 rounded-full"
+        onClick={nextSlide}
       >
         ❯
       </button>
-
-      {/* Dots for manual navigation */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
-        {banners.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={`w-3 h-3 rounded-full ${currentIndex === index ? "bg-white" : "bg-gray-400"
-              }`}
-          ></button>
-        ))}
-      </div>
     </div>
   );
 };

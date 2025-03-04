@@ -55,49 +55,13 @@ const testimonials = [
     role: "Grandmother",
     feedback: "Bought an induction cooker, and it’s so easy to use. Safe, fast, and perfect for making traditional Bangladeshi dishes!",
     rating: 5,
-  },
-  {
-    name: "Abir Chowdhury",
-    role: "Freelancer",
-    feedback: "The electric kettle I bought is top-notch! Heats water instantly and is very durable. Great for my daily tea and coffee needs.",
-    rating: 5,
-  },
-  {
-    name: "Tahmina Islam",
-    role: "Interior Designer",
-    feedback: "I ordered a stylish ceiling fan, and it fits perfectly with my home decor. The air circulation is excellent, and it's very quiet!",
-    rating: 5,
-  },
-  {
-    name: "Salman Kabir",
-    role: "University Student",
-    feedback: "Got a mini fridge for my dorm room, and it's amazing! Keeps my drinks and snacks cool without taking up too much space.",
-    rating: 5,
-  },
-  {
-    name: "Shafiq Ahmed",
-    role: "Hotel Manager",
-    feedback: "The commercial washing machine I purchased is excellent for our hotel laundry. It handles large loads efficiently and saves water.",
-    rating: 5,
-  },
-  {
-    name: "Farzana Yasmin",
-    role: "Beauty Salon Owner",
-    feedback: "Ordered a hairdryer and straightener, and both are of high quality. They work perfectly for my salon. Very satisfied with Marxio!",
-    rating: 5,
-  },
-  {
-    name: "Imran Hossain",
-    role: "Photographer",
-    feedback: "Bought a high-resolution smart TV, and the picture quality is breathtaking. Perfect for watching my edited photos and videos.",
-    rating: 5,
-  },
+  }
 ];
 
 const Testimonial = () => {
   return (
     <section className="flex justify-center mt-20">
-      <div className="w-full p-5 md:max-w-[900px] flex flex-col gap-3">
+      <div className="w-full p-5 md:max-w-[1080px] flex flex-col gap-3">
         <h1 className="text-center font-semibold text-xl">Our Customers Love</h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
           {testimonials.map((testimonial, index) => (

@@ -32,35 +32,36 @@ export default function Header() {
   }, []);
 
   const menuList = [
-    { name: "Panjabi", link: "/categories/of7m6kr0oUPhntIEh3xE" },
-    { name: "Fan", link: "/categories/BTHP7QKfUhO2y17cZSwe" },
-    { name: "Refrigerator", link: "/categories/BayUo8OyhsS0F7WrzkqY" },
-    { name: "Kettle", link: "/categories/CguA0NuNca9Gv1UpDmKQ" },
-    { name: "Microwave", link: "/categories/GG4xNmfE2iyY8QQ9sIkL" },
+    { name: "Eid Collection", link: "/categories/of7m6kr0oUPhntIEh3xE" },
+    { name: "Skin-care Beauty", link: "/categories/efXisYOcU5F97vhVMVNw" },
+    { name: "Air Conditioner", link: "/categories/b5P1AgWnOIwR4Mlknf5e" },
+    { name: "Refrigerator & Freezer", link: "/categories/BayUo8OyhsS0F7WrzkqY" },
     { name: "Washing Machine", link: "/categories/JeWjYpL50c8jwckb0w9H" },
-    { name: "AC", link: "/categories/b5P1AgWnOIwR4Mlknf5e" },
-    { name: "Lamp", link: "/categories/M7TdNEhyUZHurxw6CJFS" },
-    { name: "Blender", link: "/categories/YELLimWrxFIeas4j2PYC" },
-    { name: "Iron", link: "/categories/a3PpVz84BJSMjwsq8ety" },
-    { name: "Rice Cooker", link: "/categories/bxkNjUA2hxyFpJpdtdPU" },
-    { name: "Stove", link: "/categories/cAwBCbQZ7ncxfGdy0c5n" },
-    { name: "Skin Care", link: "/categories/efXisYOcU5F97vhVMVNw" },
-    { name: "Induction", link: "/categories/yV6iStZBXeMeS0vgqaAe" },
+    { name: "Microwave and Electric oven", link: "/categories/GG4xNmfE2iyY8QQ9sIkL" },
+    { name: "Home Appliance", link: "/categories/BTHP7QKfUhO2y17cZSwe" },
+   
+    // { name: "Lamp", link: "/categories/M7TdNEhyUZHurxw6CJFS" },
+    // { name: "Blender", link: "/categories/YELLimWrxFIeas4j2PYC" },
+    // { name: "Iron", link: "/categories/a3PpVz84BJSMjwsq8ety" },
+    // { name: "Rice Cooker", link: "/categories/bxkNjUA2hxyFpJpdtdPU" },
+    // { name: "Stove", link: "/categories/cAwBCbQZ7ncxfGdy0c5n" },
+    
+    // { name: "Induction", link: "/categories/yV6iStZBXeMeS0vgqaAe" },
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white bg-opacity-80 backdrop-blur-lg shadow-md md:py-3 pt-2 md:pt-2 px-4 border-b w-full">
+    <header className="sticky top-0 z-50 bg-white bg-opacity-80 backdrop-blur-lg shadow-md md:py-3 pt-2 md:pt-2 px-6 border-b w-full">
       <div className="flex items-center justify-between max-w-screen-2xl mx-auto">
         <Link href="/">
           <img className="h-8 md:h-10" src="/Marxio.png" alt="Logo" />
         </Link>
 
         {/* Search Bar - Visible on md+ screens */}
-        <div className="hidden md:flex flex-grow mx-6 border border-gray-300 rounded-full overflow-hidden max-w-md">
+        <div className="hidden md:flex flex-grow mx-6 border border-gray-300 rounded-full overflow-hidden max-w-2xl">
           <input
             type="text"
             placeholder="What are you looking for?"
-            className="flex-grow p-2 outline-none"
+            className="flex-grow pl-6 p-2 outline-none"
           />
           <button className="bg-orange-500 text-white px-4 py-2 flex items-center">
             <Search size={20} />
@@ -137,10 +138,10 @@ export default function Header() {
         {/* Product Dropdown with Scroll */}
         <div className="relative group">
           <button
-            className="text-sm pr-4 py-2 flex items-center gap-1 rounded-lg hover:bg-gray-50"
+            className="text-sm px-4 py-2 flex items-center gap-1 rounded-lg bg-orange-100 text-center"
             onClick={() => setIsProductMenuOpen(!isProductMenuOpen)}
           >
-            Products <ChevronDown size={16} />
+            All Categories <ChevronDown size={16} />
           </button>
 
           {categories.length > 0 && (
@@ -167,7 +168,7 @@ export default function Header() {
 
         {menuList.map((item) => (
           <Link key={item.name} href={item.link}>
-            <button className="text-sm px-2 py-1 rounded-lg hover:bg-gray-50">{item.name}</button>
+            <button className="text-sm px-3 py-1 rounded-lg hover:bg-gray-50 font-thin">{item.name}</button>
           </Link>
         ))}
       </nav>
@@ -191,7 +192,7 @@ export default function Header() {
               className="text-lg font-semibold flex justify-between w-full"
               onClick={() => setIsProductMenuOpen(!isProductMenuOpen)}
             >
-              Products <ChevronDown size={18} />
+              All Categories <ChevronDown size={18} />
             </button>
 
             {isProductMenuOpen && categories.length > 0 && (

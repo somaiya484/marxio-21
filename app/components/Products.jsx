@@ -35,7 +35,7 @@ export default function ProductsGridView({ products }) {
 
 export function ProductCard({ product }) {
   return (
-    <div className="flex flex-col gap-3 border p-4 rounded-lg">
+    <div className="flex flex-col gap-3 border p-4 rounded-lg md:max-w-[1500px]">
       <div className="relative w-full">
         <img
           src={product?.featureImageURL}

@@ -45,7 +45,7 @@ export default function Categories({ categories }) {
   }
 
   return (
-    <div className="flex flex-col gap-8 justify-center overflow-hidden md:p-10 p-5 mt-20">
+    <div className="flex flex-col gap-8 justify-center overflow-hidden md:p-10 p-5 md:max-w-[1300px] mx-auto">
       <Slider {...settings}>
         {(categories.length <= 2 ? [...categories, ...categories, ...categories] : categories).map(
           (category, index) => (
