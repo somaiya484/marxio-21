@@ -56,8 +56,8 @@ export default function Footer() {
           </div>
 
 
-            {/* Quick Links */}
-            <div>
+          {/* Quick Links */}
+          <div>
             <h3 className="font-semibold text-lg">Quick Links</h3>
             <ul className="mt-3 space-y-2 text-sm">
               <li><Link href="/categories/of7m6kr0oUPhntIEh3xE">Eid Collection</Link></li>
@@ -73,7 +73,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="flex flex-col md:flex-row justify-between items-center mt-4">
+        <div className="flex justify-between items-center mt-4">
           {/* Contact Info */}
           <div className="flex flex-wrap justify-center md:justify-start gap-5">
             <div className="flex gap-1 items-center">
@@ -89,12 +89,17 @@ export default function Footer() {
               <span className="text-sm">Bangladesh</span>
             </div>
           </div>
+
+          {/* Copyright */}
+          <div className="flex justify-center mt-5">
+            <p className="text-xs">© {currentYear} All rights reserved by Marxio</p>
+          </div>
         </div>
 
-        {/* Copyright */}
-        <div className="flex justify-center mt-5">
-          <p className="text-xs">© {currentYear} All rights reserved by Marxio</p>
-        </div>
+
+
+
+
       </div>
     </footer>
   );

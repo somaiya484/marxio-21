@@ -41,7 +41,7 @@ export default function Page() {
 
   useEffect(() => {
     if (user) {
-      router.push("/account");
+      router.push("/");
     }
   }, [user]);
 
@@ -49,7 +49,7 @@ export default function Page() {
     <main className="w-full flex justify-center items-center bg-gray-300 md:p-24 p-10 min-h-screen">
       <section className="flex flex-col gap-3">
         <div className="flex justify-center">
-          <img className="h-12" src="/logo.png" alt="Logo" />
+          <img className="h-12" src="/Marxio.png" alt="Logo" />
         </div>
         <div className="flex flex-col gap-3 bg-white md:p-10 p-5 rounded-xl md:min-w-[440px] w-full">
           <h1 className="font-bold text-xl">Login With Email</h1>
@@ -86,19 +86,19 @@ export default function Page() {
               isLoading={isLoading}
               isDisabled={isLoading}
               type="submit"
-              color="primary"
+              className="bg-orange-500 text-white mb-10"
             >
               Login
             </Button>
           </form>
           <div className="flex justify-between">
             <Link href={`/sign-up`}>
-              <button className="font-semibold text-sm text-blue-700">
+              <button className="font-semibold text-sm text-orange-600">
                 New? Create Account
               </button>
             </Link>
             <Link href={`/forget-password`}>
-              <button className="font-semibold text-sm text-blue-700">
+              <button className="font-semibold text-sm text-orange-600">
                 Forget Password?
               </button>
             </Link>

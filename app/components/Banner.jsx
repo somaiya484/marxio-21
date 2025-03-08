@@ -4,9 +4,10 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 
 const banners = [
-  "/banner1.jpg",
+  "/L1.jpg",
+  "/1.jpg",
+  "/banner32.jpg",
   "/banner2.jpg",
-  "/banner3.jpg",
 ];
 
 const Banner = () => {

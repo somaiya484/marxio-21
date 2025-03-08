@@ -40,7 +40,7 @@ export default function Page() {
         photoURL: user?.photoURL,
       });
       toast.success("Successfully Sign Up");
-      router.push("/account");
+      router.push("/");
     } catch (error) {
       toast.error(error?.message);
     }
@@ -51,7 +51,7 @@ export default function Page() {
     <main className="w-full flex justify-center items-center bg-gray-300 md:p-24 p-10 min-h-screen">
       <section className="flex flex-col gap-3">
         <div className="flex justify-center">
-          <img className="h-12" src="/logo.png" alt="Logo" />
+          <img className="h-12" src="/Marxio.png" alt="Logo" />
         </div>
         <div className="flex flex-col gap-3 bg-white md:p-10 p-5 rounded-xl md:min-w-[440px] w-full">
           <h1 className="font-bold text-xl">Sign Up With Email</h1>
@@ -99,14 +99,14 @@ export default function Page() {
               isLoading={isLoading}
               isDisabled={isLoading}
               type="submit"
-              color="primary"
+              className="text-white bg-orange-500"
             >
               Sign Up
             </Button>
           </form>
           <div className="flex justify-between">
             <Link href={`/login`}>
-              <button className="font-semibold text-sm text-blue-700">
+              <button className="font-semibold text-sm text-orange-600">
                 Already user? Sign In
               </button>
             </Link>

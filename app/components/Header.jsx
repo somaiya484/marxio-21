@@ -81,7 +81,7 @@ export default function Header() {
               title="My Account"
               className="h-9 w-9 flex justify-center items-center rounded-full hover:bg-gray-100"
             >
-              <UserCircle2 size={22} />
+              <UserCircle2 size={28} />
             </button>
           </Link>
           <AuthContextProvider>

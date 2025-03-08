@@ -1,40 +1,35 @@
 "use client";
-
-import { Button } from "@nextui-org/react";
 import Link from "next/link";
 import Slider from "react-slick";
 
 export default function Categories({ categories }) {
   var settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
+    dots: false,
+    infinite: true, 
+    speed: 6000, 
     slidesToShow: 5,
-    slidesToScroll: 5,
-    initialSlide: 0,
+    slidesToScroll: 1, 
+    autoplay: true, 
+    autoplaySpeed: 0, 
+    cssEase: "linear", 
+    pauseOnHover: true, 
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 4,
-          slidesToScroll: 4,
-          infinite: true,
-          dots: true,
         },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
-          initialSlide: 3,
         },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
         },
       },
     ],

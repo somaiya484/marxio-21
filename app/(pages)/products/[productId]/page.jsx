@@ -24,7 +24,7 @@ export default async function Page({ params }) {
   const product = await getProduct({ id: productId });
   return (
     <main className="p-5 md:p-10">
-      <section className="flex flex-col-reverse md:flex-row gap-3">
+      <section className="flex flex-col-reverse md:flex-row gap-3 md:max-w-[1150px]">
         <Photos
           imageList={[product?.featureImageURL, ...(product?.imageList ?? [])]}
         />
@@ -32,7 +32,7 @@ export default async function Page({ params }) {
       </section>
       <div className="flex justify-center py-10">
         <AuthContextProvider>
-          <div className="flex flex-col md:flex-row gap-4 md:max-w-[900px] w-full">
+          <div className="flex flex-col md:flex-row gap-4 md:max-w-[1050px] w-full">
             <AddReview productId={productId} />
             <Reviews productId={productId} />
           </div>
