@@ -1,6 +1,5 @@
 import { Mail, MapPin, Phone, Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -12,7 +11,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 border-b pb-6">
           {/* Company Info */}
           <div>
-            <Image src="/White.png" alt="Logo" width={120} height={50} />
+            <img src="/White.png" alt="Logo" width={120} height={50} />
             <p className="mt-3 text-sm">Your one-stop shop <br />for home essentials!</p>
             <div className="flex space-x-3 mt-4">
               <a href="https://www.facebook.com/MarxioShop" className="text-white hover:text-gray-300">

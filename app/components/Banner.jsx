@@ -1,6 +1,4 @@
 "use client";
-
-import Image from "next/image";
 import { useState, useEffect } from "react";
 
 const banners = [
@@ -19,18 +17,17 @@ const Banner = () => {
 
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? banners.length - 1 : prevIndex - 1
+      prevIndex === 0 ? banners.length - 1 : prevIndex - 1g
     );
   };
 
-  // Auto-slide every 5 seconds
   useEffect(() => {
     const interval = setInterval(nextSlide, 5000);
-    return () => clearInterval(interval); // Cleanup on unmount
+    return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="relative w-full h-[400px] overflow-hidden">
+    <div className="relative w-full h-[490px] overflow-hidden">
       {banners.map((banner, index) => (
         <div
           key={index}
@@ -38,13 +35,13 @@ const Banner = () => {
             index === currentIndex ? "opacity-100" : "opacity-0"
           }`}
         >
-          <Image
+          <img
             src={banner}
             alt={`Banner ${index + 1}`}
             layout="fill"
             objectFit="cover"
             priority={index === currentIndex}
-            className="h-[400px] w-full object-cover"
+            className="h-full w-full object-cover"
           />
         </div>
       ))}

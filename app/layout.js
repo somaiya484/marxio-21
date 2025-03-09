@@ -17,7 +17,8 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Marxio"
+  title: "Marxio",
+  icon: "/Marxio.png", 
 };
 
 export default function RootLayout({ children }) {
