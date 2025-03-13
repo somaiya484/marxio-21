@@ -43,7 +43,7 @@ export default async function Page({ params }) {
 
   return (
     <main className="flex justify-center p-5 md:px-10 md:py-5 w-full">
-      <div className="flex flex-col gap-6 max-w-[900px] p-5">
+      <div className="flex flex-col gap-6 max-w-[1100px] p-5">
         <div className="w-full flex justify-center">
           <img className="h-[110px]" src={category.imageURL} alt={category.title} />
         </div>

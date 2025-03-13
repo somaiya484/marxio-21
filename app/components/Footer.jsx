@@ -5,14 +5,14 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="flex flex-col gap-5 w-full bg-orange-400 text-white p-5 md:p-10 mt-10">
-      <div className="w-[1050px] mx-auto">
+    <footer className="flex flex-col gap-5 w-full bg-orange-400 text-white p-6 md:p-10 mt-10">
+      <div className="max-w-screen-xl mx-auto w-full px-4">
         {/* Top Section */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 border-b pb-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left border-b pb-6">
           {/* Company Info */}
-          <div>
+          <div className="flex flex-col items-center md:items-start">
             <img src="/White.png" alt="Logo" width={120} height={50} />
-            <p className="mt-3 text-sm">Your one-stop shop <br />for home essentials!</p>
+            <p className="mt-3 text-sm">Your one-stop shop <br /> for home essentials!</p>
             <div className="flex space-x-3 mt-4">
               <a href="https://www.facebook.com/MarxioShop" className="text-white hover:text-gray-300">
                 <Facebook size={24} />
@@ -54,7 +54,6 @@ export default function Footer() {
             </ul>
           </div>
 
-
           {/* Quick Links */}
           <div>
             <h3 className="font-semibold text-lg">Quick Links</h3>
@@ -68,37 +67,31 @@ export default function Footer() {
               <li><Link href="/categories/BTHP7QKfUhO2y17cZSwe">Home Appliance</Link></li>
             </ul>
           </div>
-
         </div>
 
         {/* Bottom Section */}
-        <div className="flex justify-between items-center mt-4">
+        <div className="flex flex-col md:flex-row justify-between items-center mt-6 text-center md:text-left">
           {/* Contact Info */}
-          <div className="flex flex-wrap justify-center md:justify-start gap-5">
-            <div className="flex gap-1 items-center">
+          <div className="flex flex-col md:flex-row gap-3 md:gap-5 text-sm justify-center md:justify-start">
+            <div className="flex items-center gap-1">
               <Phone size={16} />
-              <a href="tel:+8801828621601" className="text-sm">+8801828621601</a>
+              <a href="tel:+8801828621601">+8801828621601</a>
             </div>
-            <div className="flex gap-1 items-center">
+            <div className="flex items-center gap-1">
               <Mail size={16} />
-              <a href="mailto:info.marxio@gmail.com" className="text-sm">info.marxio@gmail.com</a>
+              <a href="mailto:info.marxio@gmail.com">info.marxio@gmail.com</a>
             </div>
-            <div className="flex gap-1 items-center">
+            <div className="flex items-center gap-1">
               <MapPin size={16} />
-              <span className="text-sm">Bangladesh</span>
+              <span>Bangladesh</span>
             </div>
           </div>
 
           {/* Copyright */}
-          <div className="flex justify-center mt-5">
+          <div className="mt-5 md:mt-0">
             <p className="text-xs">© {currentYear} All rights reserved by Marxio</p>
           </div>
         </div>
-
-
-
-
-
       </div>
     </footer>
   );

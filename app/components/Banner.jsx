@@ -17,7 +17,7 @@ const Banner = () => {
 
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? banners.length - 1 : prevIndex - 1g
+      prevIndex === 0 ? banners.length - 1 : prevIndex - 1
     );
   };
 
@@ -38,9 +38,6 @@ const Banner = () => {
           <img
             src={banner}
             alt={`Banner ${index + 1}`}
-            layout="fill"
-            objectFit="cover"
-            priority={index === currentIndex}
             className="h-full w-full object-cover"
           />
         </div>

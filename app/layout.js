@@ -18,12 +18,12 @@ const geistMono = localFont({
 
 export const metadata = {
   title: "Marxio",
-  icon: "/Marxio.png", 
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+       <link rel="icon" href="/Marxiop.png" />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

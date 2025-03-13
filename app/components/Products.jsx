@@ -9,7 +9,7 @@ import { Suspense } from "react";
 import MyRating from "./MyRating";
 
 export default function ProductsGridView({ products }) {
-  const [visibleCount, setVisibleCount] = useState(60);
+  const [visibleCount, setVisibleCount] = useState(30);
   const showMore = () => setVisibleCount(products.length);
 
   return (
