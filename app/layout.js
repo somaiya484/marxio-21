@@ -23,10 +23,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-       <link rel="icon" href="/Marxiop.png" />
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <head>
+        <title>Marxio</title>
+        <link rel="icon" href="/Marxiopwe.png" />
+      </head>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Toaster />
         <NextUIProvider>{children}</NextUIProvider>
       </body>
